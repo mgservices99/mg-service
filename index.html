@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MG Services — Portfolio & Offres</title>
+<meta name="description" content="MG Services — création de sites vitrines futuristes, maintenance 24/7. Site express 80€, pack pro 110€, maintenance 20€/mois.">
+
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Calendly CSS -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#060814;
+  --panel:#0f1724;
+  --accent:#f7c04a;
+  --muted:#9fb0c8;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,Arial;
+  background: radial-gradient(circle at 10% 10%, #071226 0%, var(--bg) 40%);
+  color:#e6f0fb;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+/* Header */
+.header{
+  position:sticky;top:0;z-index:100;
+  background:linear-gradient(90deg, rgba(6,8,20,0.6), rgba(6,10,25,0.3));
+  backdrop-filter: blur(6px);
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;margin:0 auto;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--accent), #ffd78a);color:#071226;font-weight:800;box-shadow:0 8px 30px rgba(247,192,74,0.12)
+}
+.nav{display:flex;align-items:center;gap:16px}
+.nav a{color:#dfeaf8;font-weight:600;font-size:15px}
+.btn{background:var(--accent);color:#071226;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(247,192,74,0.12)}
+
+/* HERO */
+.hero{
+  display:flex;gap:28px;align-items:center;justify-content:space-between;padding:56px 20px;border-radius:16px;margin-top:18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.02);
+}
+.left{flex:1;min-width:260px}
+.eyebrow{color:var(--accent);font-weight:700;margin-bottom:10px}
+h1{font-size:40px;margin:0 0 12px;line-height:1.02}
+.lead{color:var(--muted);margin:0 0 18px;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:12px;color:var(--accent);cursor:pointer}
+.trust-row{display:flex;gap:12px;margin-top:18px}
+
+/* Device preview */
+.right{flex:1;display:flex;align-items:center;justify-content:center;min-width:300px}
+.device{width:100%;max-width:520px;border-radius:16px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);box-shadow:0 40px 80px rgba(3,6,15,0.6);position:relative;overflow:hidden}
+.device .screen{height:360px;border-radius:10px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
+.device img{width:100%;height:100%;object-fit:cover}
+
+/* Sections */
+.section{margin-top:30px;padding:28px;border-radius:12px;background:transparent}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.section h2{margin:8px 0 18px;color:var(--accent);font-size:22px}
+
+/* Services grid */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.service{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02);transition:transform .28s ease,box-shadow .28s ease;cursor:pointer}
+.service:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(2,6,23,0.6)}
+.service h4{margin:0 0 8px}
+.service p{color:var(--muted);margin:0 0 12px}
+.service .price{font-weight:800;color:var(--accent)}
+
+/* Portfolio */
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.portfolio-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .28s}
+.portfolio-item img{width:100%;height:140px;object-fit:cover;display:block}
+.portfolio-item:hover{transform:scale(1.03)}
+
+/* Testimonials */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.testi{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+/* Contact */
+.contact-form{display:grid;gap:10px;max-width:520px}
+input,textarea{padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#e8f3ff}
+.submit{background:var(--accent);color:#071226;padding:12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+
+/* Footer */
+.footer{margin-top:28px;padding:14px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* small screens */
+@media(max-width:900px){
+  h1{font-size:28px}
+  .hero{flex-direction:column;padding:20px}
+  .device .screen{height:220px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner container">
+    <div class="brand">
+      <div class="logo">MG</div>
+      <div>
+        <div style="font-weight:700">MG Services</div>
+        <div style="font-size:12px;color:var(--muted)">Sites vitrines • Maintenance • Démo rapide</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="navigation">
+      <a href="#services">Prestations</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#contact">Contact</a>
+      <div style="width:10px"></div>
+      <div class="btn" id="openCalendly">Réserver une démo</div>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:18px">
+
+  <!-- HERO -->
+  <section class="hero card" role="region" aria-label="accueil">
+    <div class="left">
+      <div class="eyebrow">Site prêt · Personnalisable · Démo 1 semaine</div>
+      <h1>Sites vitrines qui transforment vos visiteurs en clients</h1>
+      <p class="lead">Je fournis un site pro (80 €) qui met en valeur votre commerce : page d’accueil, galerie, services, prise de rendez-vous intégrée. Pack Pro 110 € (maintenance 3 mois). Maintenance mensuelle 20 €/mois.</p>
+
+      <div class="actions">
+        <div class="btn" id="primaryCTA">Voir une démo</div>
+        <div class="ghost" id="toServices">Nos prestations</div>
+      </div>
+
+      <div class="trust-row" style="margin-top:16px">
+        <div class="card" style="padding:8px;border-radius:10px">
+          <strong style="color:var(--accent)">80€</strong><div style="font-size:12px;color:var(--muted)">site prêt</div>
+        </div>
+        <div class="card" style="padding:8px;border-radius:10px">
+          <strong style="color:var(--accent)">110€</strong><div style="font-size:12px;color:var(--muted)">site + maintenance 3 mois</div>
+        </div>
+        <div class="card" style="padding:8px;border-radius:10px">
+          <strong style="color:var(--accent)">20€/mois</strong><div style="font-size:12px;color:var(--muted)">maintenance continue</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="device" id="tiltDevice">
+        <div class="screen">
+          <!-- preview image (replace) -->
+          <img src="assets/preview.jpg" alt="aperçu site">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section card">
+    <h2>Prestations</h2>
+    <div class="services-grid">
+      <div class="service" data-name="Site vitrine">
+        <h4>Site vitrine (express)</h4>
+        <p>Accueil, services, galerie, contact, intégration Calendly. Personnalisable 48–72h.</p>
+        <div class="price">80 €</div>
+      </div>
+
+      <div class="service" data-name="Pack Pro">
+        <h4>Pack Pro — site + maintenance</h4>
+        <p>Site + maintenance 3 mois (mises à jour, images, textes illimités, support prioritaire).</p>
+        <div class="price">110 €</div>
+      </div>
+
+      <div class="service" data-name="Maintenance">
+        <h4>Maintenance continue</h4>
+        <p>Mise à jour des contenus, corrections, sauvegardes et surveillance.</p>
+        <div class="price">20 €/mois</div>
+      </div>
+
+      <div class="service" data-name="Refonte & SEO">
+        <h4>Refonte & optimisation</h4>
+        <p>Refonte design + optimisation SEO local pour attirer des clients.</p>
+        <div class="price">À partir de 60 €</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section card">
+    <h2>Portfolio — Exemples & maquettes</h2>
+    <p style="color:var(--muted);margin-bottom:12px">Maquettes & projets exemples (à utiliser comme preuve de concept ou personnalisées pour votre commerce).</p>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-item" data-title="Salon Le 52 - Maquette">
+        <img src="assets/portfolio1.jpg" alt="Portfolio 1">
+      </div>
+      <div class="portfolio-item" data-title="Studio Belle - Maquette">
+        <img src="assets/portfolio2.jpg" alt="Portfolio 2">
+      </div>
+      <div class="portfolio-item" data-title="Boulangerie Locale - Maquette">
+        <img src="assets/portfolio3.jpg" alt="Portfolio 3">
+      </div>
+      <div class="portfolio-item" data-title="Artiste Visuel - Maquette">
+        <img src="assets/portfolio4.jpg" alt="Portfolio 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING CTA -->
+  <section id="pricing" class="section card">
+    <h2>Offres rapides</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+      <div class="card" style="text-align:center">
+        <h3>Site express</h3>
+        <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">80 €</div>
+        <div style="color:var(--muted);margin-bottom:12px">Livraison 48–72h, support de base</div>
+        <button class="btn" id="buy80">Choisir</button>
+      </div>
+
+      <div class="card" style="text-align:center">
+        <h3>Pack Pro</h3>
+        <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">110 €</div>
+        <div style="color:var(--muted);margin-bottom:12px">Maintenance 3 mois incluse, support prioritaire</div>
+        <button class="btn" id="buy110">Choisir</button>
+      </div>
+
+      <div class="card" style="text-align:center">
+        <h3>Maintenance mensuelle</h3>
+        <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">15 €/mois</div>
+        <div style="color:var(--muted);margin-bottom:12px">Mises à jour & corrections</div>
+        <button class="btn" id="buyMonthly">S'abonner</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section card">
+    <h2>Avis clients</h2>
+    <div class="testi-grid">
+      <div class="testi">
+        <strong>Marie - Salon Le 52</strong>
+        <p style="color:var(--muted)">“Livraison rapide et pro. Le bouton de réservation nous a fait gagner des RDV dès la 1ère semaine.”</p>
+      </div>
+      <div class="testi">
+        <strong>Karim - Studio Belle</strong>
+        <p style="color:var(--muted)">“Maintenance réactive, modifications faites en 24h. Gros plus.”</p>
+      </div>
+      <div class="testi">
+        <strong>Laura - Boulangerie du Coin</strong>
+        <p style="color:var(--muted)">“Le design est moderne et simple. Les clients ont adoré.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section card">
+    <h2>Contact & Réserver une démo</h2>
+    <p style="color:var(--muted)">Remplissez le formulaire ou réservez directement une démo en cliquant sur "Réserver une démo".</p>
+
+    <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="4" placeholder="Votre message (ex : salon, besoin)" required></textarea>
+      <div style="display:flex;gap:10px;align-items:center">
+        <button type="submit" class="submit">Envoyer</button>
+        <button type="button" class="ghost" id="bookDemo">Réserver une démo</button>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>© <span id="yr"></span> MG Services — Sites vitrines & maintenance</div>
+  <div style="margin-top:6px">Site réalisé par <a href="https://tonsitepro.com" target="_blank">MG SERVICES</a> — contact@mgservices.com</div>
+</footer>
+
+<!-- Calendly widget -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<!-- Interactions & small tilt -->
+<script>
+  // set year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Replace with your Calendly event link
+  const calendlyURL = 'https://calendly.com/CALENDLY_LINK_HERE/30min'; // <-- REPLACE
+
+  function openCalendly(){ Calendly.initPopupWidget({url: calendlyURL}); return false; }
+
+  document.getElementById('openCalendly').addEventListener('click', openCalendly);
+  document.getElementById('primaryCTA').addEventListener('click', openCalendly);
+  document.getElementById('buy80').addEventListener('click', openCalendly);
+  document.getElementById('buy110').addEventListener('click', openCalendly);
+  document.getElementById('bookDemo').addEventListener('click', openCalendly);
+
+  // scroll to services
+  document.getElementById('toServices').addEventListener('click', ()=> document.querySelector('#services').scrollIntoView({behavior:'smooth'}));
+
+  // tiny tilt effect for device preview
+  (function(){
+    const el = document.getElementById('tiltDevice');
+    if(!el) return;
+    el.addEventListener('mousemove', (e)=>{
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      el.style.transform = `rotateX(${ -y * 6 }deg) rotateY(${ x * 8 }deg) translateZ(0)`;
+      el.style.transition = 'transform 0.05s';
+    });
+    el.addEventListener('mouseleave', ()=>{ el.style.transform = 'rotateX(0) rotateY(0)'; el.style.transition='transform 0.4s ease'; });
+  })();
+
+  // click portfolio to preview title (example)
+  document.querySelectorAll('.portfolio-item').forEach(item=>{
+    item.addEventListener('click', ()=>{
+      const t = item.getAttribute('data-title') || 'Projet';
+      alert(t + ' — maquette / démonstration (je peux la personnaliser pour vous).');
+    });
+  });
+
+  // service click opens Calendly prefilled (simple)
+  document.querySelectorAll('.service').forEach(s=>{
+    s.addEventListener('click', ()=> openCalendly());
+  });
+
+  // form intercept: friendly alert
+  document.querySelectorAll('.contact-form').forEach(f=>{
+    f.addEventListener('submit', ()=> { setTimeout(()=> alert('Merci ! Votre message a été envoyé — on vous répond sous 24h.'), 50); });
+  });
+</script>
+</body>
+</html>
