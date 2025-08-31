@@ -21,8 +21,8 @@
   --glass: rgba(255,255,255,0.03);
   --radius:14px;
 }
-*{box-sizing:border-box;}
-html,body{height:100%;}
+*{box-sizing:border-box}
+html,body{height:100%}
 body{
   margin:0;
   font-family:"Poppins",system-ui,Arial;
@@ -30,8 +30,8 @@ body{
   color:#e6f0fb;
   -webkit-font-smoothing:antialiased;
 }
-a{color:var(--accent);text-decoration:none;}
-.container{max-width:1200px;margin:0 auto;padding:24px;}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:24px}
 
 /* Header */
 .header{
@@ -40,15 +40,15 @@ a{color:var(--accent);text-decoration:none;}
   backdrop-filter: blur(6px);
   border-bottom:1px solid rgba(255,255,255,0.02);
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;margin:0 auto;padding:14px 20px;}
-.brand{display:flex;align-items:center;gap:12px;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;margin:0 auto;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:12px}
 .logo{
   width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,var(--accent), #ffd78a);color:#071226;font-weight:800;box-shadow:0 8px 30px rgba(247,192,74,0.12);
+  background:linear-gradient(135deg,var(--accent), #ffd78a);color:#071226;font-weight:800;box-shadow:0 8px 30px rgba(247,192,74,0.12)
 }
-.nav{display:flex;align-items:center;gap:16px;}
-.nav a{color:#dfeaf8;font-weight:600;font-size:15px;}
-.btn{background:var(--accent);color:#071226;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(247,192,74,0.12);}
+.nav{display:flex;align-items:center;gap:16px}
+.nav a{color:#dfeaf8;font-weight:600;font-size:15px}
+.btn{background:var(--accent);color:#071226;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(247,192,74,0.12)}
 
 /* HERO */
 .hero{
@@ -56,51 +56,56 @@ a{color:var(--accent);text-decoration:none;}
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border:1px solid rgba(255,255,255,0.02);
 }
-.left{flex:1;min-width:260px;}
-.eyebrow{color:var(--accent);font-weight:700;margin-bottom:10px;}
-h1{font-size:40px;margin:0 0 12px;line-height:1.02;}
-.lead{color:var(--muted);margin:0 0 18px;max-width:620px;}
-.actions{display:flex;gap:12px;flex-wrap:wrap;}
-.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:12px;color:var(--accent);cursor:pointer;}
-.trust-row{display:flex;gap:12px;margin-top:18px;}
+.left{flex:1;min-width:260px}
+.eyebrow{color:var(--accent);font-weight:700;margin-bottom:10px}
+h1{font-size:40px;margin:0 0 12px;line-height:1.02}
+.lead{color:var(--muted);margin:0 0 18px;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:12px;color:var(--accent);cursor:pointer}
+.trust-row{display:flex;gap:12px;margin-top:18px}
 
 /* Device preview */
-.right{flex:1;display:flex;align-items:center;justify-content:center;min-width:300px;}
-.device{width:100%;max-width:520px;border-radius:16px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);box-shadow:0 40px 80px rgba(3,6,15,0.6);position:relative;overflow:hidden;}
-.device .screen{height:360px;border-radius:10px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;}
-.device img{width:100%;height:100%;object-fit:cover;}
+.right{flex:1;display:flex;align-items:center;justify-content:center;min-width:300px}
+.device{width:100%;max-width:520px;border-radius:16px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);box-shadow:0 40px 80px rgba(3,6,15,0.6);position:relative;overflow:hidden}
+.device .screen{height:360px;border-radius:10px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
+.device img{width:100%;height:100%;object-fit:cover}
 
 /* Sections */
-.section{margin-top:30px;padding:28px;border-radius:12px;background:transparent;}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
-.section h2{margin:8px 0 18px;color:var(--accent);font-size:22px;}
+.section{margin-top:30px;padding:28px;border-radius:12px;background:transparent}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.section h2{margin:8px 0 18px;color:var(--accent);font-size:22px}
 
 /* Services grid */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
-.service{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02);transition:transform .28s ease,box-shadow .28s ease;cursor:pointer;}
-.service:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(2,6,23,0.6);}
-.service h4{margin:0 0 8px;}
-.service p{color:var(--muted);margin:0 0 12px;}
-.service .price{font-weight:800;color:var(--accent);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.service{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02);transition:transform .28s ease,box-shadow .28s ease;cursor:pointer}
+.service:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(2,6,23,0.6)}
+.service h4{margin:0 0 8px}
+.service p{color:var(--muted);margin:0 0 12px}
+.service .price{font-weight:800;color:var(--accent)}
 
 /* Portfolio */
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
-.portfolio-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .28s;}
-.portfolio-item img{width:100%;height:140px;object-fit:cover;display:block;}
-.portfolio-item:hover{transform:scale(1.03);}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.portfolio-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .28s}
+.portfolio-item img{width:100%;height:140px;object-fit:cover;display:block}
+.portfolio-item:hover{transform:scale(1.03)}
 
 /* Testimonials */
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
-.testi{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.testi{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+/* Contact */
+.contact-form{display:grid;gap:10px;max-width:520px}
+input,textarea{padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#e8f3ff}
+.submit{background:var(--accent);color:#071226;padding:12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
 
 /* Footer */
-.footer{margin-top:28px;padding:14px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02);}
+.footer{margin-top:28px;padding:14px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
 
 /* small screens */
 @media(max-width:900px){
-  h1{font-size:28px;}
-  .hero{flex-direction:column;padding:20px;}
-  .device .screen{height:220px;}
+  h1{font-size:28px}
+  .hero{flex-direction:column;padding:20px}
+  .device .screen{height:220px}
 }
 </style>
 </head>
@@ -158,7 +163,7 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02;}
     <div class="right">
       <div class="device" id="tiltDevice">
         <div class="screen">
-          <img src="portfolio1.jpg" alt="aperçu site">
+          <img src="https://raw.githubusercontent.com/mgservices99/mg-service/main/hero.jpg" alt="aperçu site">
         </div>
       </div>
     </div>
@@ -192,11 +197,11 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02;}
   <section id="portfolio" class="section card">
     <h2>Portfolio — Exemples & maquettes</h2>
     <div class="portfolio-grid" id="portfolioGrid">
-      <div class="portfolio-item" data-title="Salon Le 52 - Maquette">
-        <img src="portfolio1.jpg" alt="Portfolio 1">
+      <div class="portfolio-item" data-title="Portfolio 1">
+        <img src="https://raw.githubusercontent.com/mgservices99/mg-service/main/portfolio1.jpg" alt="Portfolio 1">
       </div>
-      <div class="portfolio-item" data-title="Studio Belle - Maquette">
-        <img src="portfolio2.jpg" alt="Portfolio 2">
+      <div class="portfolio-item" data-title="Portfolio 2">
+        <img src="https://raw.githubusercontent.com/mgservices99/mg-service/main/portfolio2.jpg" alt="Portfolio 2">
       </div>
     </div>
   </section>
@@ -208,18 +213,21 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02;}
       <div class="card" style="text-align:center">
         <h3>Site express</h3>
         <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">80 €</div>
+        <div style="color:var(--muted);margin-bottom:12px">Livraison 48–72h, support de base</div>
         <button class="btn" id="buy80">Choisir</button>
       </div>
 
       <div class="card" style="text-align:center">
         <h3>Pack Pro</h3>
         <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">110 €</div>
+        <div style="color:var(--muted);margin-bottom:12px">Maintenance 3 mois incluse, support prioritaire</div>
         <button class="btn" id="buy110">Choisir</button>
       </div>
 
       <div class="card" style="text-align:center">
         <h3>Maintenance mensuelle</h3>
         <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">20 €/mois</div>
+        <div style="color:var(--muted);margin-bottom:12px">Mises à jour & corrections</div>
         <button class="btn" id="buyMonthly">S'abonner</button>
       </div>
     </div>
@@ -240,15 +248,11 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02;}
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT / CALENDLY -->
   <section id="contact" class="section card">
     <h2>Contact & Réserver une démo</h2>
-    <p style="color:var(--muted)">Réservez directement une démo via Calendly :</p>
-
-    <div style="min-width:320px;height:700px;">
-      <iframe src="https://calendly.com/mohammedbahria03/demande-de-site" 
-              width="100%" height="100%" frameborder="0"></iframe>
-    </div>
+    <p style="color:var(--muted)">Cliquez sur le bouton ci-dessous pour réserver votre démo directement via Calendly.</p>
+    <div class="btn" id="bookDemo">Réserver une démo</div>
   </section>
 
 </main>
@@ -256,54 +260,58 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02;}
 <!-- FOOTER -->
 <footer class="footer">
   <div>© <span id="yr"></span> MG Services — Sites vitrines & maintenance</div>
-  <div style="margin-top:6px">Site réalisé par <a href="mailto:mg.services.pro.fr@gmail.com">MG SERVICES</a> — mg.services.pro.fr@gmail.com</div>
+  <div style="margin-top:6px">Site réalisé par <a href="https://mgservices99.github.io/mg-service" target="_blank">MG SERVICES</a> — mg.services.pro.fr@gmail.com</div>
 </footer>
 
 <!-- Calendly widget -->
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script>
-  // set year
-  document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-  const calendlyURL = 'https://calendly.com/mohammedbahria03/demande-de-site';
+// Lien Calendly
+const calendlyURL = 'https://calendly.com/mohammedbahria03/demande-de-site';
 
-  function openCalendly(){ Calendly.initPopupWidget({url:calendlyURL}); return false; }
+function openCalendly(){ Calendly.initPopupWidget({url:calendlyURL}); return false; }
 
-  document.getElementById('openCalendly').addEventListener('click', openCalendly);
-  document.getElementById('primaryCTA').addEventListener('click', openCalendly);
-  document.getElementById('buy80').addEventListener('click', openCalendly);
-  document.getElementById('buy110').addEventListener('click', openCalendly);
-  document.getElementById('buyMonthly').addEventListener('click', openCalendly);
+document.getElementById('openCalendly').addEventListener('click', openCalendly);
+document.getElementById('primaryCTA').addEventListener('click', openCalendly);
+document.getElementById('buy80').addEventListener('click', openCalendly);
+document.getElementById('buy110').addEventListener('click', openCalendly);
+document.getElementById('buyMonthly').addEventListener('click', openCalendly);
+document.getElementById('bookDemo').addEventListener('click', openCalendly);
 
-  // scroll to services
-  document.getElementById('toServices').addEventListener('click', ()=> document.querySelector('#services').scrollIntoView({behavior:'smooth'}));
+// Scroll vers services
+document.getElementById('toServices').addEventListener('click', ()=> document.querySelector('#services').scrollIntoView({behavior:'smooth'}));
 
-  // tiny tilt effect for device preview
-  (function(){
-    const el = document.getElementById('tiltDevice');
-    if(!el) return;
-    el.addEventListener('mousemove', (e)=>{
-      const rect = el.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      el.style.transform = `rotateX(${ -y * 6 }deg) rotateY(${ x * 8 }deg) translateZ(0)`;
-      el.style.transition = 'transform 0.05s';
-    });
-    el.addEventListener('mouseleave', ()=>{ el.style.transform = 'rotateX(0) rotateY(0)'; el.style.transition='transform 0.4s ease'; });
-  })();
-
-  // portfolio click
-  document.querySelectorAll('.portfolio-item').forEach(item=>{
-    item.addEventListener('click', ()=>{
-      const t = item.getAttribute('data-title') || 'Projet';
-      alert(t + ' — maquette / démonstration (je peux la personnaliser pour vous).');
-    });
+// Mini tilt device
+(function(){
+  const el = document.getElementById('tiltDevice');
+  if(!el) return;
+  el.addEventListener('mousemove', (e)=>{
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = `rotateX(${ -y * 6 }deg) rotateY(${ x * 8 }deg) translateZ(0)`;
+    el.style.transition = 'transform 0.05s';
   });
-</script>
+  el.addEventListener('mouseleave', ()=>{ el.style.transform = 'rotateX(0) rotateY(0)'; el.style.transition='transform 0.4s ease'; });
+})();
 
+// Portfolio click alert
+document.querySelectorAll('.portfolio-item').forEach(item=>{
+  item.addEventListener('click', ()=>{
+    const t = item.getAttribute('data-title') || 'Projet';
+    alert(t + ' — maquette / démonstration (je peux la personnaliser pour vous).');
+  });
+});
+
+// Services click opens Calendly
+document.querySelectorAll('.service').forEach(s=> s.addEventListener('click', openCalendly));
+</script>
 </body>
 </html>
+
 
 
 
