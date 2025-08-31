@@ -6,11 +6,7 @@
 <title>MG Services — Portfolio & Offres</title>
 <meta name="description" content="MG Services — création de sites vitrines futuristes, maintenance 24/7. Site express 80€, pack pro 110€, maintenance 20€/mois.">
 
-<!-- Google font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Calendly CSS -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
 <style>
 :root{
@@ -62,7 +58,6 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02}
 .lead{color:var(--muted);margin:0 0 18px;max-width:620px}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:12px;color:var(--accent);cursor:pointer}
-.trust-row{display:flex;gap:12px;margin-top:18px}
 
 /* Device preview */
 .right{flex:1;display:flex;align-items:center;justify-content:center;min-width:300px}
@@ -83,150 +78,8 @@ h1{font-size:40px;margin:0 0 12px;line-height:1.02}
 .service p{color:var(--muted);margin:0 0 12px}
 .service .price{font-weight:800;color:var(--accent)}
 
-/* Portfolio */
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.portfolio-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .28s}
-.portfolio-item img{width:100%;height:140px;object-fit:cover;display:block}
-.portfolio-item:hover{transform:scale(1.03)}
-
-/* Testimonials */
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.testi{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-
-/* Contact */
-.contact-form{display:grid;gap:10px;max-width:520px}
-input,textarea{padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#e8f3ff}
-.submit{background:var(--accent);color:#071226;padding:12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
-
-/* Footer */
-.footer{margin-top:28px;padding:14px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
-
-/* small screens */
-@media(max-width:900px){
-  h1{font-size:28px}
-  .hero{flex-direction:column;padding:20px}
-  .device .screen{height:220px}
-}
-</style>
-</head>
-<body>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="header-inner container">
-    <div class="brand">
-      <div class="logo">MG</div>
-      <div>
-        <div style="font-weight:700">MG Services</div>
-        <div style="font-size:12px;color:var(--muted)">Sites vitrines • Maintenance • Démo rapide</div>
-      </div>
-    </div>
-
-    <nav class="nav" aria-label="navigation">
-      <a href="#services">Prestations</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Tarifs</a>
-      <a href="#contact">Contact</a>
-      <div style="width:10px"></div>
-      <div class="btn" id="openCalendly">Réserver une démo</div>
-    </nav>
-  </div>
-</header>
-
-<main class="container" style="padding-top:18px">
-
-  <!-- HERO -->
-  <section class="hero card" role="region" aria-label="accueil">
-    <div class="left">
-      <div class="eyebrow">Site prêt · Personnalisable · Démo 1 semaine</div>
-      <h1>Sites vitrines qui transforment vos visiteurs en clients</h1>
-      <p class="lead">Je fournis un site pro (80 €) qui met en valeur votre commerce : page d’accueil, galerie, services, prise de rendez-vous intégrée. Pack Pro 110 € (maintenance 3 mois). Maintenance mensuelle 20 €/mois.</p>
-
-      <div class="actions">
-        <div class="btn" id="primaryCTA">Voir une démo</div>
-        <div class="ghost" id="toServices">Nos prestations</div>
-      </div>
-
-      <div class="trust-row" style="margin-top:16px">
-        <div class="card" style="padding:8px;border-radius:10px">
-          <strong style="color:var(--accent)">80€</strong><div style="font-size:12px;color:var(--muted)">site prêt</div>
-        </div>
-        <div class="card" style="padding:8px;border-radius:10px">
-          <strong style="color:var(--accent)">110€</strong><div style="font-size:12px;color:var(--muted)">site + maintenance 3 mois</div>
-        </div>
-        <div class="card" style="padding:8px;border-radius:10px">
-          <strong style="color:var(--accent)">20€/mois</strong><div style="font-size:12px;color:var(--muted)">maintenance continue</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="device" id="tiltDevice">
-        <div class="screen">
-          <img src="https://raw.githubusercontent.com/mgservices99/mg-service/main/hero.jpg" alt="aperçu site">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section card">
-    <h2>Prestations</h2>
-    <div class="services-grid">
-      <div class="service" data-name="Site vitrine">
-        <h4>Site vitrine (express)</h4>
-        <p>Accueil, services, galerie, contact, intégration Calendly. Personnalisable 48–72h.</p>
-        <div class="price">80 €</div>
-      </div>
-
-      <div class="service" data-name="Pack Pro">
-        <h4>Pack Pro — site + maintenance</h4>
-        <p>Site + maintenance 3 mois (mises à jour, images, textes illimités, support prioritaire).</p>
-        <div class="price">110 €</div>
-      </div>
-
-      <div class="service" data-name="Maintenance">
-        <h4>Maintenance continue</h4>
-        <p>Mise à jour des contenus, corrections, sauvegardes et surveillance.</p>
-        <div class="price">20 €/mois</div>
-      </div>
-    </div>
-  </section>
-
- <!-- NOUVELLE SECTION DYNAMIQUE -->
-<section id="impact" class="section card">
-  <h2 style="color:var(--accent);text-align:center;margin-bottom:24px">Pourquoi MG Services ?</h2>
-  <p style="color:var(--muted);text-align:center;max-width:650px;margin:0 auto 32px">
-    Nos sites vitrines ne sont pas juste beaux : ils convertissent, captivent et impressionnent vos clients dès la première visite.
-  </p>
-
-  <div class="impact-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
-    <div class="impact-card">
-      <div class="icon">⚡</div>
-      <h4>Rapidité Extrême</h4>
-      <p>Livraison en 48–72h, prêt à l’emploi, sans compromis sur la qualité.</p>
-    </div>
-    <div class="impact-card">
-      <div class="icon">🎯</div>
-      <h4>Conversion Optimisée</h4>
-      <p>Design pensé pour attirer et convertir vos visiteurs en clients fidèles.</p>
-    </div>
-    <div class="impact-card">
-      <div class="icon">💡</div>
-      <h4>Innovation</h4>
-      <p>Interface futuriste et adaptable, pour se démarquer de vos concurrents.</p>
-    </div>
-    <div class="impact-card">
-      <div class="icon">🔧</div>
-      <h4>Maintenance Facile</h4>
-      <p>Mises à jour simples, support rapide, sécurité maximale.</p>
-    </div>
-  </div>
-</section>
-
-<style>
 /* Impact Section */
-.impact-grid{margin-top:12px}
+.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:12px}
 .impact-card{
   background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border:1px solid rgba(255,255,255,0.03);
@@ -253,128 +106,133 @@ input,textarea{padding:12px;border-radius:10px;background:transparent;border:1px
 }
 .impact-card h4{margin:8px 0 8px;color:var(--accent)}
 .impact-card p{color:var(--muted);font-size:14px;line-height:1.4}
-
-/* Animation on scroll */
 .impact-card {opacity:0; transform: translateY(40px);}
-.impact-card.visible{opacity:1; transform: translateY(0); transition: all 0.6s ease-out;}
+.impact-card.visible{opacity:1; transform: translateY(0); transition: all 0.6s ease-out}
+
+/* Contact */
+.contact-section{margin-top:30px;padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(6,8,20,0.7), rgba(6,10,25,0.5));text-align:center;}
+.contact-section h2{color:var(--accent);margin-bottom:12px;}
+.contact-section p{color:var(--muted);}
+.contact-section a{display:inline-block;margin:8px 12px;padding:12px 24px;background:var(--accent);color:#071226;font-weight:700;border-radius:12px;text-decoration:none;transition:0.3s;}
+.contact-section a:hover{background:#ffd700;}
+
+/* Footer */
+.footer{margin-top:28px;padding:14px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* small screens */
+@media(max-width:900px){
+  h1{font-size:28px}
+  .hero{flex-direction:column;padding:20px}
+  .device .screen{height:220px}
+}
 </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner container">
+    <div class="brand">
+      <div class="logo">MG</div>
+      <div>
+        <div style="font-weight:700">MG Services</div>
+        <div style="font-size:12px;color:var(--muted)">Sites vitrines • Maintenance • Démo rapide</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="navigation">
+      <a href="#services">Prestations</a>
+      <a href="#impact">Pourquoi MG</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:18px">
+
+  <!-- HERO -->
+  <section class="hero card">
+    <div class="left">
+      <div class="eyebrow">Site prêt · Personnalisable · Démo 1 semaine</div>
+      <h1>Sites vitrines qui transforment vos visiteurs en clients</h1>
+      <p class="lead">Je fournis un site pro (80 €) qui met en valeur votre commerce : page d’accueil, galerie, services, prise de rendez-vous intégrée. Pack Pro 110 € (maintenance 3 mois). Maintenance mensuelle 20 €/mois.</p>
+      <div class="actions">
+        <div class="btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Contactez-moi</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="device">
+        <div class="screen">
+          <img src="https://raw.githubusercontent.com/mgservices99/mg-service/main/hero.jpg" alt="aperçu site">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section card">
+    <h2>Prestations</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h4>Site vitrine (express)</h4>
+        <p>Accueil, services, galerie, contact, intégration Calendly. Personnalisable 48–72h.</p>
+        <div class="price">80 €</div>
+      </div>
+
+      <div class="service">
+        <h4>Pack Pro — site + maintenance</h4>
+        <p>Site + maintenance 3 mois (mises à jour, images, textes illimités, support prioritaire).</p>
+        <div class="price">110 €</div>
+      </div>
+
+      <div class="service">
+        <h4>Maintenance continue</h4>
+        <p>Mise à jour des contenus, corrections, sauvegardes et surveillance.</p>
+        <div class="price">20 €/mois</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section id="impact" class="section card">
+    <h2 style="color:var(--accent);text-align:center;margin-bottom:24px">Pourquoi MG Services ?</h2>
+    <p style="color:var(--muted);text-align:center;max-width:650px;margin:0 auto 32px">
+      Nos sites vitrines ne sont pas juste beaux : ils convertissent, captivent et impressionnent vos clients dès la première visite.
+    </p>
+    <div class="impact-grid">
+      <div class="impact-card"><div class="icon">⚡</div><h4>Rapidité Extrême</h4><p>Livraison 48–72h, prêt à l’emploi.</p></div>
+      <div class="impact-card"><div class="icon">🎯</div><h4>Conversion Optimisée</h4><p>Design pensé pour transformer vos visiteurs en clients.</p></div>
+      <div class="impact-card"><div class="icon">💡</div><h4>Innovation</h4><p>Interface moderne et unique, adaptée à vos besoins.</p></div>
+      <div class="impact-card"><div class="icon">🔧</div><h4>Maintenance Facile</h4><p>Mises à jour simples et support rapide.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <h2>Contactez-moi</h2>
+    <p>Pour vos projets de sites vitrines, envoyez un message ou contactez-moi directement :</p>
+    <a href="mailto:mg.services.pro.fr@gmail.com">📧 mg.services.pro.fr@gmail.com</a>
+    <a href="tel:0749305771">📞 07 49 30 57 71</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div>© <span id="yr"></span> MG Services — Sites vitrines & maintenance</div>
+</footer>
 
 <script>
-// Animation scroll
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Animation scroll impact
 const impactCards = document.querySelectorAll('.impact-card');
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add('visible');
   });
 },{threshold:0.2});
-
 impactCards.forEach(c=>observer.observe(c));
 </script>
 
-
-  <!-- PRICING CTA -->
-  <section id="pricing" class="section card">
-    <h2>Offres rapides</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
-      <div class="card" style="text-align:center">
-        <h3>Site express</h3>
-        <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">80 €</div>
-        <div style="color:var(--muted);margin-bottom:12px">Livraison 48–72h, support de base</div>
-        <button class="btn" id="buy80">Choisir</button>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <h3>Pack Pro</h3>
-        <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">110 €</div>
-        <div style="color:var(--muted);margin-bottom:12px">Maintenance 3 mois incluse, support prioritaire</div>
-        <button class="btn" id="buy110">Choisir</button>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <h3>Maintenance mensuelle</h3>
-        <div style="font-size:20px;font-weight:800;color:var(--accent);margin:8px 0">20 €/mois</div>
-        <div style="color:var(--muted);margin-bottom:12px">Mises à jour & corrections</div>
-        <button class="btn" id="buyMonthly">S'abonner</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section card">
-    <h2>Avis clients</h2>
-    <div class="testi-grid">
-      <div class="testi">
-        <strong>Marie - Salon Le 52</strong>
-        <p style="color:var(--muted)">“Livraison rapide et pro. Le bouton de réservation nous a fait gagner des RDV dès la 1ère semaine.”</p>
-      </div>
-      <div class="testi">
-        <strong>Karim - Studio Belle</strong>
-        <p style="color:var(--muted)">“Maintenance réactive, modifications faites en 24h. Gros plus.”</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT / CALENDLY -->
-  <section id="contact" class="section card">
-    <h2>Contact & Réserver une démo</h2>
-    <p style="color:var(--muted)">Cliquez sur le bouton ci-dessous pour réserver votre démo directement via Calendly.</p>
-    <div class="btn" id="bookDemo">Réserver une démo</div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div>© <span id="yr"></span> MG Services — Sites vitrines & maintenance</div>
-  <div style="margin-top:6px">Site réalisé par <a href="https://mgservices99.github.io/mg-service" target="_blank">MG SERVICES</a> — mg.services.pro.fr@gmail.com</div>
-</footer>
-
-<!-- Calendly widget -->
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-// Lien Calendly
-const calendlyURL = 'https://calendly.com/mohammedbahria03/demande-de-site';
-
-function openCalendly(){ Calendly.initPopupWidget({url:calendlyURL}); return false; }
-
-document.getElementById('openCalendly').addEventListener('click', openCalendly);
-document.getElementById('primaryCTA').addEventListener('click', openCalendly);
-document.getElementById('buy80').addEventListener('click', openCalendly);
-document.getElementById('buy110').addEventListener('click', openCalendly);
-document.getElementById('buyMonthly').addEventListener('click', openCalendly);
-document.getElementById('bookDemo').addEventListener('click', openCalendly);
-
-// Scroll vers services
-document.getElementById('toServices').addEventListener('click', ()=> document.querySelector('#services').scrollIntoView({behavior:'smooth'}));
-
-// Mini tilt device
-(function(){
-  const el = document.getElementById('tiltDevice');
-  if(!el) return;
-  el.addEventListener('mousemove', (e)=>{
-    const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    el.style.transform = `rotateX(${ -y * 6 }deg) rotateY(${ x * 8 }deg) translateZ(0)`;
-    el.style.transition = 'transform 0.05s';
-  });
-  el.addEventListener('mouseleave', ()=>{ el.style.transform = 'rotateX(0) rotateY(0)'; el.style.transition='transform 0.4s ease'; });
-})();
-
-// Portfolio click alert
-document.querySelectorAll('.portfolio-item').forEach(item=>{
-  item.addEventListener('click', ()=>{
-    const t = item.getAttribute('data-title') || 'Projet';
-    alert(t + ' — maquette / démonstration (je peux la personnaliser pour vous).');
-  });
-});
-
-// Services click opens Calendly
-document.querySelectorAll('.service').forEach(s=> s.addEventListener('click', openCalendly));
-</script>
 </body>
 </html>
 
